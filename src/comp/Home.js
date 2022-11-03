@@ -25,9 +25,11 @@ function Home() {
   const removeExtraSpace = () => {
     const newText = text.replace(/\s+/g, " ");
     setText(newText.trim());
-   
+    
+  };
   const Clear = () => {
     setText("");
+   
   };
   const copyClipboard = () => {
     var copyText = document.getElementById("text");
