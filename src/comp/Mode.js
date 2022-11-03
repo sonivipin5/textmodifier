@@ -3,6 +3,10 @@ import React, { useState } from "react";
 export default function Mode(prop) {
 
   localStorage.setItem("rootKey", [ "--primary-color", "--first-base-color", "--second-base-color", "--third-base-color" ]);
+
+  if (!localStorage.getItem("color")) {
+    localStorage.setItem("color", "#e0e0e0");
+  }
   const rootKey = localStorage.getItem("rootKey").split(",");
 
   const [color, setColor] = useState(localStorage.getItem("color").split(","));
