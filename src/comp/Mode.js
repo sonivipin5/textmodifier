@@ -3,26 +3,19 @@ import React, { useState } from "react";
 export default function Mode(prop) {
 
   localStorage.setItem("rootKey", [ "--primary-color", "--first-base-color", "--second-base-color", "--third-base-color" ]);
+  const rootKey = localStorage.getItem("rootKey").split(",");
 
-  let [color, setColor] = useState();
+  const [color, setColor] = useState(localStorage.getItem("color").split(","));
 
   const root = document.querySelector(":root");
 
   setTimeout(() => {
-    let check = document.querySelector('#checkbox') 
-    if(color[0] === '#333742'){
-      check.setAttribute('checked','checked')
+    let check = document.querySelector("#checkbox");
+    if (color[0] === "#333742") {
+      check.setAttribute("checked", "checked");
     }
-  }, 0)
-  
-
-    color = localStorage.getItem("color");
-    color = color.split(",");
-   let rootKey = localStorage.getItem("rootKey");
-    rootKey = rootKey.split(",");
-    root.style.setProperty("--primary-color", `${color[0]}`);
-
-   
+  }, 0);
+  root.style.setProperty("--primary-color", `${color[0]}`);
 
   const rootVar = getComputedStyle(root);
   let pc = rootVar.getPropertyValue("--primary-color");
@@ -38,15 +31,9 @@ export default function Mode(prop) {
 
     setTimeout(() => {
       pc = rootVar.getPropertyValue("--primary-color");
-      
-      color = localStorage.getItem("color");
-      color = color.split(",");
-      setColor(color)
+      setColor(localStorage.getItem("color").split(","))
 
     }, 0);
-
-
-
 
     if (color[0] === "#e0e0e0") {
 

@@ -62,9 +62,15 @@ function Home() {
                 <button onClick={removeExtraSpace}>Remove Extra Space </button>
                 <button onClick={copyClipboard}>Copy Text </button>
                 <button onClick={Clear}>Clear </button>
+            </div><br />
+            <div className="preview">
+
+            <h3>Total Words - {text && text.split(" ").length}</h3>
+            <h3>Totla Character - {text && text.length}</h3>
+            <h3>Totla Sentence - {text && text.split('. ').length}</h3>
+            <h2>Preview</h2>
+            <p>{text}</p>
             </div>
-            <p>Word{text.split(" ").length}</p>
-            <p>Character{text.length}</p>
 
         </div>
         <br />
