@@ -1,0 +1,16 @@
+:root{
+    --primary-color: #e0e0e0;
+    --first-base-color: #bebebe;
+    --second-base-color: #ffffff;
+    --third-base-color: #000000;
+    /* --primary-color: #333742;
+    --first-base-color: #252830;
+    --second-base-color: #414654;
+    --third-base-color: #3ddddd; */
+    --primary-border-style:  5px 5px 14px var(--first-base-color), -5px -5px 14px var(--second-base-color);
+    --second-border-style:inset  5px 5px 14px var(--first-base-color),inset -5px -5px 14px var(--second-base-color);
+    --scroll-thumb:-1px  1px 2px  var(--second-base-color),
+                    1px -1px 2px  var(--second-base-color),
+                    1px -1px 2px  var(--second-base-color),
+                   -1px  1px 2px  var(--second-base-color);
+}
