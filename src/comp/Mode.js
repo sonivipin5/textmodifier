@@ -6,7 +6,6 @@ export default function Mode(prop) {
 
   let [color, setColor] = useState();
 
-  const [btn, setbtn] = useState();
   const root = document.querySelector(":root");
 
   setTimeout(() => {
@@ -44,7 +43,6 @@ export default function Mode(prop) {
       color = color.split(",");
       setColor(color)
 
-      setbtn(color[0])
     }, 0);
 
 
