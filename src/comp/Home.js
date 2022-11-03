@@ -9,27 +9,25 @@ function Home() {
   const ToUpperCase = () => {
     const newText = text.toUpperCase();
     setText(newText.trim());
-    toast.success(`Uppercase`);
+   
   };
   const ToLowerCase = () => {
     const newText = text.toLowerCase();
     setText(newText.trim());
-    toast.success(`Lowercase`);
+   
   };
   const ToCapital = () => {
     const newText = text.replace(/\b./g, (e) => e.toUpperCase());
     const newtext = newText.replace(/\B./g, (s) => s.toLowerCase());
     setText(newtext.trim());
-    toast.success(`Capital`);
+    
   };
   const removeExtraSpace = () => {
     const newText = text.replace(/\s+/g, " ");
     setText(newText.trim());
-    toast.success(`Extra Spaces Removed`);
-  };
+   
   const Clear = () => {
     setText("");
-    toast.success(`Clear Text`);
   };
   const copyClipboard = () => {
     var copyText = document.getElementById("text");
